@@ -1,8 +1,5 @@
 import React from "react";
 import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
-import '../logo.svg'
-
-
   function RenderDish({dish}) {
     return (
       <div className="col-sm col-md-5 mt-1">
