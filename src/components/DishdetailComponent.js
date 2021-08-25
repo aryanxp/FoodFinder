@@ -52,5 +52,4 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
       return <div></div>;
     }
   }
-}
 export default DishDetail;
