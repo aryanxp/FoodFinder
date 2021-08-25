@@ -21,7 +21,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
           return (
             <ul className="list-unstyled">
               <li>
-                (<img src={require("../logo.svg")}/>
+                (<img src={require("../logo.svg")} alt="Star"/>
                 {comment.rating}){comment.comment}
               </li>
               <li>
