@@ -9,7 +9,7 @@ export const initialState = {
     promotions: PROMO,
     leaders: LEADERS
 }
-
-export const Reducer = (action,state = initialState) => {
+// eslint-disable-next-line
+export const Reducer = (state = initialState, action) => {
     return state
 }
