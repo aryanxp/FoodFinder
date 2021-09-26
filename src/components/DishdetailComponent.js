@@ -7,6 +7,7 @@ import { Control, Errors, LocalForm } from "react-redux-form";
 
 const minLength = (len) => (val) => val && (val.length >= len)
 const maxLength = (len) => (val) => !(val) || (val.length <= len)
+
 class CommentForm extends Component {
   constructor(props) {
     super(props);
@@ -21,9 +22,10 @@ class CommentForm extends Component {
       isModalOpen: !this.state.isModalOpen
     });
   }
-  handleSubmit(values){
-    console.log('Current state is:' +JSON.stringify(values));
-    alert('Current state is:' +JSON.stringify(values));
+  handleSubmit(values) {
+    this.toggleModal()
+    console.log('Current state is:' + JSON.stringify(values));
+    alert('Current state is:' + JSON.stringify(values));
   }
   render() {
     return (
@@ -74,11 +76,11 @@ class CommentForm extends Component {
                 </Col>
               </Row>
               <Row className="form-group">
-                  <Col >
-                    <Button type="submit" color="primary">
-                      Submit
-                    </Button>
-                  </Col>
+                <Col >
+                  <Button type="submit" color="primary">
+                    Submit
+                  </Button>
+                </Col>
               </Row>
             </LocalForm>
           </ModalBody>
