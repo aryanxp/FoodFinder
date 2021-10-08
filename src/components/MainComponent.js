@@ -23,7 +23,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = (dispatch) => ({
   addComment: (dishId, rating, author, comment) => dispatch(addComment(dishId, rating, author, comment)),
   fetchDishes: () => { dispatch(fetchDishes()) },
-  resetFeedbackForm: () => {dispatch(actions.reset('feedback'))},
+  resetFeedbackForm: () => { dispatch(actions.reset('feedback')) },
   fetchComments: () => dispatch(fetchComments()),
   fetchPromos: () => dispatch(fetchPromos())
 })
@@ -42,8 +42,8 @@ class Main extends Component {
           dishesLoading={this.props.dishes.isLoading}
           dishesErrMess={this.props.dishes.errMess}
           promotion={this.props.promotions.promotions.filter((promo) => promo.featured)[0]}
-          promoLoading={this.props.promotions.isLoading}
-          promoErrMess={this.props.promotions.errMess}
+          promosLoading={this.props.promotions.isLoading}
+          promosErrMess={this.props.promotions.errMess}
           leader={this.props.leaders.filter((leader) => leader.featured)[0]}
         />
       );
@@ -70,7 +70,7 @@ class Main extends Component {
           <Route path='/aboutus' component={() => <AboutUs leaders={this.props.leaders} />} />
           <Route exact path='/menu' component={() => <Menu dishes={this.props.dishes} />} />
           <Route path='/menu/:dishId' component={DishWithId} />
-          <Route exact path='/contactus' component={() => <Contact resetFeedbackForm={this.props.resetFeedbackForm}/>} />
+          <Route exact path='/contactus' component={() => <Contact resetFeedbackForm={this.props.resetFeedbackForm} />} />
           <Redirect to="/home" />
         </Switch>
         <Footer />
