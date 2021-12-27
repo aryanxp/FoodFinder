@@ -1,6 +1,7 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Fade, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { baseUrl } from '../shared/baseUrl';
 import { Stagger } from 'react-animation-components'
 
 function RenderLeader({ leader }) {
@@ -8,7 +9,7 @@ function RenderLeader({ leader }) {
         <Stagger in>
             <Media className="row">
                 <Media left href="#" className="col-1 mx-2 my-4" >
-                    <Media object src={leader.image} alt={leader.name} />
+                    <Media object src={baseUrl+leader.image} alt={leader.name} />
                 </Media>
                 <Media body className="col mx-5 my-4">
                     <Media heading>
